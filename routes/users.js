@@ -12,7 +12,7 @@ var User = require('../models/user');
 
 router.get('/me', ensureAuthenticated, function(req, res){
   User.findById(req.user, function(err, user){
-    console.log('user in users:', user);
+    // console.log('user in users:', user);
     res.send({
       displayName: user.displayName,
       picture: user.picture
@@ -22,7 +22,7 @@ router.get('/me', ensureAuthenticated, function(req, res){
 
 router.get('/usersList', function(req, res){
   User.find({}, function(err, users){
-    console.log('all users:', users);
+    // console.log('all users:', users);
     res.send(users);
   })
 });

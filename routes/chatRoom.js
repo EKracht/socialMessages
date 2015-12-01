@@ -29,15 +29,16 @@ router.post('/', function(req, res){
 
   Message.findOne(currentUser, function(err, thread){
     if (err) return console.error(err);
-    if (!thread) {
-      var message = new Message(usersObject);
-      message.save(function(err, savedThread){
-        if (err) return console.error(err);
-        console.log(savedThread);
-        res.send(savedThread);
-      });
-    }
-      res.status(400).send('already in a thread');
+    // console.log('thread:', thread);
+    // if (!thread) {
+    var message = new Message(usersObject);
+    message.save(function(err, savedThread){
+      if (err) return console.error(err);
+      console.log(savedThread);
+      res.send(savedThread);
+    });
+    // }
+    // res.status(400).send('already in a thread');
   });
 
 
