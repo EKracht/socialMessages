@@ -28,9 +28,5 @@ userSchema.methods.createJWT = function() {
   return jwt.encode(payload, process.env.JWT_SECRET);
 };
 
-userSchema.methods.decodeJWT = function() {
- 
-}
-
 User = mongoose.model('User', userSchema);
 module.exports = User;

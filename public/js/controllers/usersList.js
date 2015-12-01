@@ -2,6 +2,7 @@
 
 angular.module('socialLogin')
 .controller('usersListCtrl', function($scope, $auth, $http, $state, $rootScope) {
+  
   $http.get('/users/usersList')    
   .then(function(res){
     $scope.users = res.data;
@@ -26,6 +27,5 @@ angular.module('socialLogin')
       console.log(err);
     });
 
-    
   };
 });

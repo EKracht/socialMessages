@@ -2,6 +2,7 @@
 
 angular.module('socialLogin')
 .controller('profileCtrl', function($scope, $auth, $state, $http) {
+  
   if (!$auth.isAuthenticated()){
     return $state.go('home');
   }

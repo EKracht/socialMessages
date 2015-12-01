@@ -13,7 +13,6 @@ var User = require('../models/user');
 router.get('/me', ensureAuthenticated, function(req, res){
   User.findById(req.user, function(err, user){
     console.log('user in users:', user);
-    // res.send(user);
     res.send({
       displayName: user.displayName,
       picture: user.picture

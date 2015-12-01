@@ -9,15 +9,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CodingHouseFI/social-login.git"
+    "url": "git+https://github.com/EKracht/socialMessages.git"
+
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/CodingHouseFI/social-login/issues"
+    "url": "https://github.com/EKracht/socialMessages.git/issues"
   },
-  "homepage": "https://github.com/CodingHouseFI/social-login#readme",
+  "homepage": "https://github.com/EKracht/socialMessages#readme",
   "dependencies": {
     "body-parser": "^1.14.1",
     "express": "^4.13.3",

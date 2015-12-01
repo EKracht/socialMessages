@@ -1,23 +1,25 @@
+// EXAMPLE
+
 'use strict';
 
 var express = require('express');
 var router = express.Router();
 
-var ensureAuthenticated = require('../config/ensureAuthenticated');
-var User = require('../models/user');
+// var ensureAuthenticated = require('../config/ensureAuthenticated');
+// var User = require('../models/user');
 
-// PAJAMAS
+// // PAJAMAS
 
-var pajamas = ['footie', 'batman', 'bunny'];
+// var pajamas = ['footie', 'batman', 'bunny'];
 
-router.use(ensureAuthenticated);
+// router.use(ensureAuthenticated);
 
-router.get('/', function(req, res) {
-  console.log('req.user:', req.user);
-  User.findById(req.user, function(err, user){
+// router.get('/', function(req, res) {
+//   console.log('req.user:', req.user);
+//   User.findById(req.user, function(err, user){
 
-  });
-  res.send(pajamas);
-});
+//   });
+//   res.send(pajamas);
+// });
 
 module.exports = router;

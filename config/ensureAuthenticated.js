@@ -3,14 +3,6 @@
 var jwt = require('jwt-simple');
 var moment = require('moment');
 
-// router.use(ensureAuthenticated);
-
-// router.get('/', ensureAuthenticated, function(req, res){
-
-// });
-
-// "Authorization": "Bearer egyfd454fsef4.54535.f25345"
-
 function ensureAuthenticated(req, res, next) {
   if (!req.headers.authorization) {
     return res.status(401).send({ message: 'Please make sure your request has an Authorization header' });
@@ -33,3 +25,5 @@ function ensureAuthenticated(req, res, next) {
 }
 
 module.exports = ensureAuthenticated;
+
+// Ex: "Authorization": "Bearer egyfd454fsef4.54535.f25345"
