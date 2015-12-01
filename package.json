@@ -5,12 +5,15 @@
   "main": "app.js",
   "scripts": {
     "setup": "rm -rf public/vendor node_modules && npm i && bower i",
-    "start": "node app.js"
+    "start": "node app.js",
+    "postinstall": "bower i"
+  },
+  "engines": {
+    "node": "5.1.0"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/EKracht/socialMessages.git"
-
   },
   "keywords": [],
   "author": "",
@@ -21,6 +24,7 @@
   "homepage": "https://github.com/EKracht/socialMessages#readme",
   "dependencies": {
     "body-parser": "^1.14.1",
+    "bower": "^1.6.8",
     "express": "^4.13.3",
     "jade": "^1.11.0",
     "jwt-simple": "^0.3.1",
