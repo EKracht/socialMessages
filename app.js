@@ -22,6 +22,9 @@ app.use(express.static('public'));
 // ROUTES
 app.use('/', require('./routes/index'));
 app.use('/auth', require('./routes/auth'));
+app.use('/pajamas', require('./routes/pajamas'));
+app.use('/users', require('./routes/users'));
+app.use('/chatRoom', require('./routes/chatRoom'));
 
 // 404 HANDLER
 app.use(function(req, res){
